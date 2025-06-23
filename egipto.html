@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: Egito</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f9f5e3;
+      color: #3b2f2f;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #c19a6b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #b38728;
+      text-align: center;
+    }
+
+    .pregunta {
+      background-color: #fff8dc;
+      border-left: 5px solid #b38728;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+
+    .pregunta h4 {
+      margin-top: 0;
+    }
+
+    .pregunta button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      background-color: #e0c97f;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pregunta button:hover {
+      background-color: #d1b762;
+    }
+
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    #resultado, #volver {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    #resultado {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    #volver a {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #b38728;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    #volver a:hover {
+      background-color: #9c7520;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #c19a6b;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quiz: Egito Antigo</h1>
+  </header>
+
+  <main>
+    <h2>Responda às seguintes perguntas:</h2>
+
+    <div class="pregunta">
+      <h4>1. Qual rio foi essencial para a civilização egípcia?</h4>
+      <button onclick="verificar(this, true)">Nilo</button>
+      <button onclick="verificar(this, false)">Eufrates</button>
+      <button onclick="verificar(this, false)">Ganges</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>2. Como se chamava o governante supremo do Egito?</h4>
+      <button onclick="verificar(this, true)">Faraó</button>
+      <button onclick="verificar(this, false)">César</button>
+      <button onclick="verificar(this, false)">Imperador</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>3. Que tipo de escrita os antigos egípcios usavam?</h4>
+      <button onclick="verificar(this, true)">Hieróglifos</button>
+      <button onclick="verificar(this, false)">Cuneiforme</button>
+      <button onclick="verificar(this, false)">Latina</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>4. Qual era o principal material de construção das pirâmides?</h4>
+      <button onclick="verificar(this, true)">Calcário</button>
+      <button onclick="verificar(this, false)">Adobe</button>
+      <button onclick="verificar(this, false)">Tijolo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>5. Que deusa era protetora do lar e da família?</h4>
+      <button onclick="verificar(this, true)">Ísis</button>
+      <button onclick="verificar(this, false)">Atena</button>
+      <button onclick="verificar(this, false)">Vênus</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>6. Para que servia a mumificação?</h4>
+      <button onclick="verificar(this, true)">Preservar o corpo para a vida após a morte</button>
+      <button onclick="verificar(this, false)">Curar doenças</button>
+      <button onclick="verificar(this, false)">Decorar templos</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>7. Qual é a estrutura mais famosa do Egito?</h4>
+      <button onclick="verificar(this, true)">Pirâmide de Gizé</button>
+      <button onclick="verificar(this, false)">Coliseu</button>
+      <button onclick="verificar(this, false)">Zigurate</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>8. Que invenção está associada ao antigo Egito?</h4>
+      <button onclick="verificar(this, true)">Papel de papiro</button>
+      <button onclick="verificar(this, false)">A bússola</button>
+      <button onclick="verificar(this, false)">O alfabeto grego</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>9. Quem descobriu a tumba de Tutancâmon em 1922?</h4>
+      <button onclick="verificar(this, true)">Howard Carter</button>
+      <button onclick="verificar(this, false)">Napoleão Bonaparte</button>
+      <button onclick="verificar(this, false)">Giovanni Belzoni</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>10. Que forma de governo tinha o Antigo Egito?</h4>
+      <button onclick="verificar(this, true)">Teocracia</button>
+      <button onclick="verificar(this, false)">Democracia</button>
+      <button onclick="verificar(this, false)">Monarquia parlamentar</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div id="resultado">
+      <button onclick="mostrarResultado()" style="padding: 10px 20px; font-size: 1em; background-color: #b38728; color: white; border: none; border-radius: 6px;">Ver resultados</button>
+      <div id="mensajeResultado" style="margin-top: 10px;"></div>
+    </div>
+
+    <div id="volver">
+      <a href="ejercicios.html">Voltar à página principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 História Interativa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+  let correctas = 0;
+  let respondidas = 0;
+
+  function verificar(boton, correcto) {
+    const contenedor = boton.parentElement;
+    const botones = contenedor.querySelectorAll("button");
+    botones.forEach(btn => btn.disabled = true);
+
+    const feedback = contenedor.querySelector(".feedback");
+    if (feedback.textContent !== "") return;
+
+    if (correcto) {
+      feedback.textContent = "✔️ Correto!";
+      feedback.style.color = "green";
+      correctas++;
+    } else {
+      feedback.textContent = "❌ Incorreto.";
+      feedback.style.color = "red";
+    }
+
+    respondidas++;
+  }
+
+  function mostrarResultado() {
+    const mensaje = document.getElementById("mensajeResultado");
+    if (respondidas < 10) {
+      mensaje.textContent = "⚠️ Responda todas as perguntas antes de ver o resultado.";
+      mensaje.style.color = "#a94442";
+    } else {
+      const incorrectas = 10 - correctas;
+      mensaje.innerHTML = `
+        ✅ Você acertou <strong>${correctas}</strong> perguntas.<br>
+        ❌ Você errou <strong>${incorrectas}</strong> perguntas.
+      `;
+      mensaje.style.color = "#3c763d";
+    }
+  }
+</script>
+</body>
+</html>
