@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz: Grécia Antiga</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f0f4f8;
+      color: #1c1c1c;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f3a93;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #1f3a93;
+      text-align: center;
+    }
+
+    .pregunta {
+      background-color: #ffffff;
+      border-left: 5px solid #1f3a93;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .pregunta h4 {
+      margin-top: 0;
+    }
+
+    .pregunta button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      background-color: #a4b0be;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pregunta button:hover {
+      background-color: #7f8fa6;
+    }
+
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    #resultado, #volver {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    #resultado {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    #volver a {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #1f3a93;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    #volver a:hover {
+      background-color: #142b6d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1f3a93;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quiz: Grécia Antiga</h1>
+  </header>
+
+  <main>
+    <h2>Responda às seguintes perguntas:</h2>
+
+    <div class="pregunta">
+      <h4>1. Qual era a cidade-estado mais poderosa da Grécia em termos militares?</h4>
+      <button onclick="verificar(this, true)">Esparta</button>
+      <button onclick="verificar(this, false)">Atenas</button>
+      <button onclick="verificar(this, false)">Corinto</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>2. Quem é considerado o pai da democracia?</h4>
+      <button onclick="verificar(this, true)">Clístenes</button>
+      <button onclick="verificar(this, false)">Péricles</button>
+      <button onclick="verificar(this, false)">Sócrates</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>3. Qual era o principal deus do panteão grego?</h4>
+      <button onclick="verificar(this, true)">Zeus</button>
+      <button onclick="verificar(this, false)">Apolo</button>
+      <button onclick="verificar(this, false)">Hades</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>4. Qual importante evento esportivo teve origem na Grécia Antiga?</h4>
+      <button onclick="verificar(this, true)">Jogos Olímpicos</button>
+      <button onclick="verificar(this, false)">Maratona de Nova York</button>
+      <button onclick="verificar(this, false)">Copa do Mundo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>5. Qual filósofo foi mestre de Platão?</h4>
+      <button onclick="verificar(this, true)">Sócrates</button>
+      <button onclick="verificar(this, false)">Aristóteles</button>
+      <button onclick="verificar(this, false)">Pitágoras</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>6. Como se chamava a assembleia cidadã em Atenas?</h4>
+      <button onclick="verificar(this, true)">Ekklesía</button>
+      <button onclick="verificar(this, false)">Senado</button>
+      <button onclick="verificar(this, false)">Ágora</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>7. Qual guerra enfrentou Atenas e Esparta?</h4>
+      <button onclick="verificar(this, true)">Guerra do Peloponeso</button>
+      <button onclick="verificar(this, false)">Guerras Médicas</button>
+      <button onclick="verificar(this, false)">Guerra de Troia</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>8. Qual era a forma de governo em Atenas durante sua era de ouro?</h4>
+      <button onclick="verificar(this, true)">Democracia</button>
+      <button onclick="verificar(this, false)">Monarquia</button>
+      <button onclick="verificar(this, false)">Tirania</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>9. Qual escritor grego é famoso por suas epopeias "A Ilíada" e "A Odisseia"?</h4>
+      <button onclick="verificar(this, true)">Homero</button>
+      <button onclick="verificar(this, false)">Heródoto</button>
+      <button onclick="verificar(this, false)">Ésquilo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>10. Que edifício sagrado está localizado na Acrópole de Atenas?</h4>
+      <button onclick="verificar(this, true)">Partenon</button>
+      <button onclick="verificar(this, false)">Coliseu</button>
+      <button onclick="verificar(this, false)">Templo de Ísis</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div id="resultado">
+      <button onclick="mostrarResultado()" style="padding: 10px 20px; font-size: 1em; background-color: #1f3a93; color: white; border: none; border-radius: 6px;">Ver resultados</button>
+      <div id="mensajeResultado" style="margin-top: 10px;"></div>
+    </div>
+
+    <div id="volver">
+      <a href="ejercicios.html">Voltar à página principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 História Interativa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    let correctas = 0;
+    let respondidas = 0;
+
+    function verificar(boton, correcto) {
+      const contenedor = boton.parentElement;
+      const botones = contenedor.querySelectorAll("button");
+      botones.forEach(btn => btn.disabled = true);
+
+      const feedback = contenedor.querySelector(".feedback");
+      if (feedback.textContent !== "") return;
+
+      if (correcto) {
+        feedback.textContent = "Correto!";
+        feedback.style.color = "green";
+        correctas++;
+      } else {
+        feedback.textContent = "Incorreto.";
+        feedback.style.color = "red";
+      }
+
+      respondidas++;
+    }
+
+    function mostrarResultado() {
+      const mensaje = document.getElementById("mensajeResultado");
+      if (respondidas < 10) {
+        mensaje.textContent = "Responda a todas as perguntas antes de ver o resultado.";
+        mensaje.style.color = "#a94442";
+      } else {
+        mensaje.textContent = `Você acertou ${correctas} de 10 perguntas.`;
+        mensaje.style.color = "#3c763d";
+      }
+    }
+  </script>
+</body>
+</html>
