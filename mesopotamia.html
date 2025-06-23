@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: Mesopotâmia</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f8f4e3;
+      color: #3b2f2f;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #a67c52;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #8b5e3c;
+      text-align: center;
+    }
+
+    .pregunta {
+      background-color: #fffdf5;
+      border-left: 6px solid #a67c52;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+
+    .pregunta h4 {
+      margin-top: 0;
+    }
+
+    .pregunta button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      background-color: #d2b48c;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pregunta button:hover {
+      background-color: #c29b75;
+    }
+
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .volver {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      background-color: #8b5e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .volver:hover {
+      background-color: #734b2c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #a67c52;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>História Interativa - Mesopotâmia</h1>
+  </header>
+
+  <main>
+    <h2>Quiz de História: Mesopotâmia</h2>
+
+    <div class="pregunta">
+      <h4>1. Entre quais rios se desenvolveu a Mesopotâmia?</h4>
+      <button onclick="verificar(this, true)">Tigre e Eufrates</button>
+      <button onclick="verificar(this, false)">Nilo e Amazonas</button>
+      <button onclick="verificar(this, false)">Danúvio e Reno</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>2. Qual foi uma das cidades-estado mais importantes da Mesopotâmia?</h4>
+      <button onclick="verificar(this, true)">Ur</button>
+      <button onclick="verificar(this, false)">Atenas</button>
+      <button onclick="verificar(this, false)">Cartago</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>3. Que forma de escrita foi inventada pelos mesopotâmicos?</h4>
+      <button onclick="verificar(this, true)">Cuneiforme</button>
+      <button onclick="verificar(this, false)">Hieroglífica</button>
+      <button onclick="verificar(this, false)">Latina</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>4. Que material os sumérios usavam para escrever?</h4>
+      <button onclick="verificar(this, true)">Tábuas de argila</button>
+      <button onclick="verificar(this, false)">Papel de papiro</button>
+      <button onclick="verificar(this, false)">Papel de arroz</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>5. Que código legal foi criado na Babilônia?</h4>
+      <button onclick="verificar(this, true)">Código de Hamurabi</button>
+      <button onclick="verificar(this, false)">Código de Justiniano</button>
+      <button onclick="verificar(this, false)">Constituição de Atenas</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>6. Qual era a função do zigurate?</h4>
+      <button onclick="verificar(this, true)">Templo religioso</button>
+      <button onclick="verificar(this, false)">Palácio real</button>
+      <button onclick="verificar(this, false)">Armazém de cereais</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>7. Qual foi uma das conquistas científicas dos mesopotâmicos?</h4>
+      <button onclick="verificar(this, true)">O sistema sexagesimal</button>
+      <button onclick="verificar(this, false)">O calendário solar de 365 dias</button>
+      <button onclick="verificar(this, false)">A bússola</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>8. Qual império unificou grande parte da Mesopotâmia no século XVIII a.C.?</h4>
+      <button onclick="verificar(this, true)">Império Babilônico</button>
+      <button onclick="verificar(this, false)">Império Persa</button>
+      <button onclick="verificar(this, false)">Império Hitita</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>9. Qual atividade econômica era fundamental na Mesopotâmia?</h4>
+      <button onclick="verificar(this, true)">Agricultura</button>
+      <button onclick="verificar(this, false)">Pesca em alto-mar</button>
+      <button onclick="verificar(this, false)">Mineração</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>10. Como eram as leis na Mesopotâmia?</h4>
+      <button onclick="verificar(this, true)">Rígidas e com punições severas</button>
+      <button onclick="verificar(this, false)">Baseadas no perdão</button>
+      <button onclick="verificar(this, false)">Não escritas</button>
+      <div class="feedback"></div>
+    </div>
+
+    <button class="volver" onclick="location.href='ejercicios.html'">Voltar para Exercícios</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 História Interativa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function verificar(boton, correto) {
+      const contenedor = boton.parentElement;
+      const botoes = contenedor.querySelectorAll("button");
+      botoes.forEach(btn => btn.disabled = true);
+      const feedback = contenedor.querySelector(".feedback");
+      if (correto) {
+        feedback.textContent = "Correto!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Incorreto. Tente revisar seus conhecimentos.";
+        feedback.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
