@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: China Antiga</title>
+  <style>
+    body {
+      font-family: 'Serif', Georgia, serif;
+      background-color: #fff8e1;
+      color: #2e1c0c;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #a50000;
+      color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #a50000;
+      text-align: center;
+    }
+
+    .pregunta {
+      background-color: #fef3c7;
+      border-left: 6px solid #a50000;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .pregunta h4 {
+      margin-top: 0;
+    }
+
+    .pregunta button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      background-color: #fcd34d;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pregunta button:hover {
+      background-color: #fbbf24;
+    }
+
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    #resultado, #volver {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    #resultado {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    #volver a {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #a50000;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    #volver a:hover {
+      background-color: #7a0000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #a50000;
+      color: gold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quiz: China Antiga</h1>
+  </header>
+
+  <main>
+    <h2>Responda às seguintes perguntas:</h2>
+
+    <div class="pregunta">
+      <h4>1. Qual rio foi fundamental para o desenvolvimento da civilização chinesa?</h4>
+      <button onclick="verificar(this, true)">Rio Amarelo</button>
+      <button onclick="verificar(this, false)">Rio Yangtzé</button>
+      <button onclick="verificar(this, false)">Rio Mekong</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>2. Qual foi a primeira dinastia histórica chinesa confirmada?</h4>
+      <button onclick="verificar(this, true)">Dinastia Shang</button>
+      <button onclick="verificar(this, false)">Dinastia Han</button>
+      <button onclick="verificar(this, false)">Dinastia Tang</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>3. Qual filosofia foi fundada por Confúcio?</h4>
+      <button onclick="verificar(this, true)">Confucionismo</button>
+      <button onclick="verificar(this, false)">Budismo</button>
+      <button onclick="verificar(this, false)">Taoísmo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>4. Qual estrutura defensiva foi construída para proteger o norte da China?</h4>
+      <button onclick="verificar(this, true)">A Grande Muralha da China</button>
+      <button onclick="verificar(this, false)">A Muralha de Jade</button>
+      <button onclick="verificar(this, false)">O Muro do Mandato Celestial</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>5. Qual foi uma importante invenção chinesa da antiguidade?</h4>
+      <button onclick="verificar(this, true)">A pólvora</button>
+      <button onclick="verificar(this, false)">O telégrafo</button>
+      <button onclick="verificar(this, false)">O vapor</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>6. Qual sistema de escrita foi desenvolvido na China antiga?</h4>
+      <button onclick="verificar(this, true)">Caracteres ideográficos</button>
+      <button onclick="verificar(this, false)">Alfabeto cirílico</button>
+      <button onclick="verificar(this, false)">Hieróglifos</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>7. Qual rota comercial conectava a China à Europa?</h4>
+      <button onclick="verificar(this, true)">A Rota da Seda</button>
+      <button onclick="verificar(this, false)">A Rota do Jade</button>
+      <button onclick="verificar(this, false)">O Caminho Imperial</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>8. Qual foi o princípio usado para justificar o poder do imperador?</h4>
+      <button onclick="verificar(this, true)">Mandato do Céu</button>
+      <button onclick="verificar(this, false)">Direito divino</button>
+      <button onclick="verificar(this, false)">Eleição do povo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>9. Qual foi uma das grandes dinastias da idade dourada chinesa?</h4>
+      <button onclick="verificar(this, true)">Dinastia Tang</button>
+      <button onclick="verificar(this, false)">Dinastia Xia</button>
+      <button onclick="verificar(this, false)">Dinastia Song do Norte</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>10. Qual arte marcial tem raízes filosóficas chinesas?</h4>
+      <button onclick="verificar(this, true)">Kung Fu</button>
+      <button onclick="verificar(this, false)">Judô</button>
+      <button onclick="verificar(this, false)">Taekwondo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div id="resultado">
+      <button onclick="mostrarResultado()" style="padding: 10px 20px; font-size: 1em; background-color: #a50000; color: white; border: none; border-radius: 6px;">Ver resultados</button>
+      <div id="mensajeResultado" style="margin-top: 10px;"></div>
+    </div>
+
+    <div id="volver">
+      <a href="ejercicios.html">Voltar à página principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 História Interativa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    let correctas = 0;
+    let respondidas = 0;
+
+    function verificar(boton, correcto) {
+      const contenedor = boton.parentElement;
+      const botones = contenedor.querySelectorAll("button");
+      botones.forEach(btn => btn.disabled = true);
+
+      const feedback = contenedor.querySelector(".feedback");
+      if (feedback.textContent !== "") return;
+
+      if (correcto) {
+        feedback.textContent = "Correto!";
+        feedback.style.color = "green";
+        correctas++;
+      } else {
+        feedback.textContent = "Incorreto.";
+        feedback.style.color = "red";
+      }
+
+      respondidas++;
+    }
+
+    function mostrarResultado() {
+      const mensaje = document.getElementById("mensajeResultado");
+      if (respondidas < 10) {
+        mensaje.textContent = "Responda todas as perguntas antes de ver o resultado.";
+        mensaje.style.color = "#a94442";
+      } else {
+        mensaje.textContent = `Você respondeu corretamente ${correctas} de 10 perguntas.`;
+        mensaje.style.color = "#3c763d";
+      }
+    }
+  </script>
+</body>
+</html>
