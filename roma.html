@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: Roma Antigua</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fdf5e6;
+      color: #1c1c1c;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8b0000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #8b0000;
+      text-align: center;
+    }
+
+    .pregunta {
+      background-color: #ffffff;
+      border-left: 5px solid #8b0000;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .pregunta h4 {
+      margin-top: 0;
+    }
+
+    .pregunta button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      background-color: #d2b48c;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pregunta button:hover {
+      background-color: #bfa27a;
+    }
+
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    #resultado, #volver {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    #resultado {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    #volver a {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #8b0000;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    #volver a:hover {
+      background-color: #5a0000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #8b0000;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quiz: Roma Antigua</h1>
+  </header>
+
+  <main>
+    <h2>Responde las siguientes preguntas:</h2>
+
+    <div class="pregunta">
+      <h4>1. ¿Qué forma de gobierno tuvo Roma antes del Imperio?</h4>
+      <button onclick="verificar(this, true)">República</button>
+      <button onclick="verificar(this, false)">Monarquía absoluta</button>
+      <button onclick="verificar(this, false)">Imperio desde el inicio</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>2. ¿Quién fue el primer emperador romano?</h4>
+      <button onclick="verificar(this, true)">Augusto</button>
+      <button onclick="verificar(this, false)">Julio César</button>
+      <button onclick="verificar(this, false)">Nerón</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>3. ¿Cómo se llamaba el gran anfiteatro de Roma?</h4>
+      <button onclick="verificar(this, true)">Coliseo</button>
+      <button onclick="verificar(this, false)">Panteón</button>
+      <button onclick="verificar(this, false)">Foro</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>4. ¿Qué pueblo fue conquistado en las Guerras Púnicas?</h4>
+      <button onclick="verificar(this, true)">Cartago</button>
+      <button onclick="verificar(this, false)">Grecia</button>
+      <button onclick="verificar(this, false)">Egipto</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>5. ¿Qué título asumía el líder del Imperio Romano?</h4>
+      <button onclick="verificar(this, true)">Emperador</button>
+      <button onclick="verificar(this, false)">Cónsul</button>
+      <button onclick="verificar(this, false)">Senador</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>6. ¿Qué sistema legal romano ha influido en muchos países actuales?</h4>
+      <button onclick="verificar(this, true)">Derecho romano</button>
+      <button onclick="verificar(this, false)">Ley mosaica</button>
+      <button onclick="verificar(this, false)">Código de Hammurabi</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>7. ¿Qué río atraviesa la ciudad de Roma?</h4>
+      <button onclick="verificar(this, true)">Tíber</button>
+      <button onclick="verificar(this, false)">Danubio</button>
+      <button onclick="verificar(this, false)">Po</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>8. ¿Quién fue asesinado el 15 de marzo del 44 a.C.?</h4>
+      <button onclick="verificar(this, true)">Julio César</button>
+      <button onclick="verificar(this, false)">Cicerón</button>
+      <button onclick="verificar(this, false)">Bruto</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>9. ¿Cómo se llamaba la asamblea legislativa de Roma?</h4>
+      <button onclick="verificar(this, true)">Senado</button>
+      <button onclick="verificar(this, false)">Agora</button>
+      <button onclick="verificar(this, false)">Corte Imperial</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="pregunta">
+      <h4>10. ¿Qué lengua hablaban los romanos?</h4>
+      <button onclick="verificar(this, true)">Latín</button>
+      <button onclick="verificar(this, false)">Griego</button>
+      <button onclick="verificar(this, false)">Hebreo</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div id="resultado">
+      <button onclick="mostrarResultado()" style="padding: 10px 20px; font-size: 1em; background-color: #8b0000; color: white; border: none; border-radius: 6px;">Ver resultados</button>
+      <div id="mensajeResultado" style="margin-top: 10px;"></div>
+    </div>
+
+    <div id="volver">
+      <a href="ejercicios.html">Volver a la página principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Historia Interactiva. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let correctas = 0;
+    let respondidas = 0;
+
+    function verificar(boton, correcto) {
+      const contenedor = boton.parentElement;
+      const botones = contenedor.querySelectorAll("button");
+      botones.forEach(btn => btn.disabled = true);
+
+      const feedback = contenedor.querySelector(".feedback");
+      if (feedback.textContent !== "") return;
+
+      if (correcto) {
+        feedback.textContent = "¡Correcto!";
+        feedback.style.color = "green";
+        correctas++;
+      } else {
+        feedback.textContent = "Incorrecto.";
+        feedback.style.color = "red";
+      }
+
+      respondidas++;
+    }
+
+    function mostrarResultado() {
+      const mensaje = document.getElementById("mensajeResultado");
+      if (respondidas < 10) {
+        mensaje.textContent = "Responde todas las preguntas antes de ver el resultado.";
+        mensaje.style.color = "#a94442";
+      } else {
+        mensaje.textContent = `Respondiste correctamente ${correctas} de 10 preguntas.`;
+        mensaje.style.color = "#3c763d";
+      }
+    }
+  </script>
+</body>
+</html>
