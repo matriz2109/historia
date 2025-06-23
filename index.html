@@ -1,70 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Historia Interactiva - Página Principal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>História Interativa - Página Principal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Historia Interactiva</h1>
+    <h1>História Interativa</h1>
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="ejercicios.html">Ejercicios</a>
-      <a href="sobre.html">Sobre nosotros</a>
-      <a href="contacto.html">Contacto y reclamos</a>
+      <a href="index.html">Início</a>
+      <a href="ejercicios.html">Exercícios</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="contacto.html">Contato e reclamações</a>
     </nav>
   </header>
 
   <main>
-    <h2>Explora las Civilizaciones Antiguas</h2>
+    <h2>Explore as Civilizações Antigas</h2>
 
-    <!-- Imagen debajo del título -->
-    <img src="imagenes/civilizaciones.jpg" alt="Civilizaciones antiguas" class="imagen-portada">
+    <img src="https://institucional.upis.br/blog/wp-content/uploads/2019/05/geografia-o-que-e-estuda-saiba-toda-historia.jpg" 
+         alt="Civilizações antigas" 
+         class="imagen-portada">
 
-    <div class="botones-temas">
-      <button onclick="mostrarContenido('mesopotamia')">Mesopotamia</button>
-      <button onclick="mostrarContenido('egipto')">Egipto</button>
-      <button onclick="mostrarContenido('roma')">Roma</button>
-      <button onclick="mostrarContenido('grecia')">Grecia</button>
-      <button onclick="mostrarContenido('china')">China</button>
-      <button onclick="mostrarContenido('otros')">Otros</button>
+    <div class="tarjetas-container">
+      <div class="tarjeta" onclick="mostrarContenido('mesopotamia')">
+        <img src="https://revistapesquisa.fapesp.br/wp-content/uploads/2023/07/RPF-notas-beijo-2023-06-site-1140.jpg" alt="Mesopotâmia">
+        <h3>Mesopotâmia</h3>
+      </div>
+
+      <div class="tarjeta" onclick="mostrarContenido('egipto')">
+        <img src="https://img.freepik.com/fotos-premium/esfinge-tendo-como-pano-de-fundo-as-grandes-piramides-egipcias-africa-planalto-de-gize_81340-2486.jpg?ga=GA1.1.1867579180.1750687248&semt=ais_hybrid&w=740" alt="Egito">
+        <h3>Egito</h3>
+      </div>
+
+      <div class="tarjeta" onclick="mostrarContenido('roma')">
+        <img src="https://img.freepik.com/fotos-premium/coliseu-em-roma-e-sol-da-manha-italia_119101-11.jpg?ga=GA1.1.1867579180.1750687248&semt=ais_hybrid&w=740" alt="Roma">
+        <h3>Roma</h3>
+      </div>
+
+      <div class="tarjeta" onclick="mostrarContenido('grecia')">
+        <img src="https://img.freepik.com/fotos-gratis/arquitetura-de-templos-da-antiga-civilizacao-grega_23-2151664743.jpg?ga=GA1.1.1867579180.1750687248&semt=ais_hybrid&w=740" alt="Grécia">
+        <h3>Grécia</h3>
+      </div>
+
+      <div class="tarjeta" onclick="mostrarContenido('china')">
+        <img src="https://img.freepik.com/fotos-gratis/arquitetura-de-monumentos-antigos-para-a-celebracao-do-dia-do-patrimonio-mundial_23-2151297206.jpg?ga=GA1.1.1867579180.1750687248&semt=ais_hybrid&w=740" alt="China">
+        <h3>China</h3>
+      </div>
     </div>
 
-    <div id="mesopotamia" class="contenido-tema" style="display: none">
-      <h3>Mesopotamia</h3>
-      <p>Mesopotamia fue una región histórica entre los ríos Tigris y Éufrates, cuna de algunas de las primeras civilizaciones como Sumeria, Babilonia y Asiria.</p>
-    </div>
-
-    <div id="egipto" class="contenido-tema" style="display: none">
-      <h3>Egipto</h3>
-      <p>Egipto antiguo se desarrolló a lo largo del río Nilo. Es conocido por sus pirámides, faraones y una rica cultura escrita en jeroglíficos.</p>
-    </div>
-
-    <div id="roma" class="contenido-tema" style="display: none">
-      <h3>Roma</h3>
-      <p>La antigua Roma fue un poderoso imperio que influenció profundamente la política, el derecho, el idioma y la arquitectura en Europa y el mundo.</p>
-    </div>
-
-    <div id="grecia" class="contenido-tema" style="display: none">
-      <h3>Grecia</h3>
-      <p>Grecia fue la cuna de la democracia, la filosofía occidental y el teatro. Grandes pensadores como Sócrates y Platón nacieron allí.</p>
-    </div>
-
-    <div id="china" class="contenido-tema" style="display: none">
-      <h3>China</h3>
-      <p>La antigua China desarrolló una civilización rica en ciencia, filosofía y arte. Dinastías como la Shang y la Han marcaron su historia.</p>
-    </div>
-
-    <div id="otros" class="contenido-tema" style="display: none">
-      <h3>Otros</h3>
-      <p>También puedes explorar otras civilizaciones como los mayas, incas, persas, y muchas más que dejaron un gran legado cultural.</p>
+    <div id="contenido-tema" class="contenido-tema" style="display: none;">
+      <h3 id="titulo-tema"></h3>
+      <p id="descripcion-tema"></p>
+      <a id="boton-quiz" href="#" class="boton-entrar">Ir para o Quiz</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Historia Interactiva. Todos los derechos reservados.</p>
+    <p>&copy; 2025 História Interativa. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
