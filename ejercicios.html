@@ -1,129 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ejercicios de Historia</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercícios - História Interativa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .tarjetas-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .tarjeta {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .tarjeta h3 {
+      padding: 10px;
+      font-size: 1.1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #004080;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Historia Interactiva</h1>
+    <h1>História Interativa</h1>
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="ejercicios.html">Ejercicios</a>
-      <a href="sobre.html">Sobre nosotros</a>
-      <a href="contacto.html">Contacto y reclamos</a>
+      <a href="index.html">Início</a>
+      <a href="ejercicios.html">Exercícios</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="contacto.html">Contato e reclamações</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Elige un tema para hacer el quiz</h2>
+  <h2>Exercícios por Civilização</h2>
 
-    <div class="botones-temas">
-      <button onclick="mostrarQuiz('mesopotamia')">Mesopotamia</button>
-      <button onclick="mostrarQuiz('egipto')">Egipto</button>
-      <button onclick="mostrarQuiz('roma')">Roma</button>
-      <button onclick="mostrarQuiz('grecia')">Grecia</button>
-      <button onclick="mostrarQuiz('china')">China</button>
-    </div>
+  <div class="tarjetas-container">
+    <a href="mesopotamia.html" class="tarjeta">
+      <img src="https://revistadigital.com.br/wp-content/uploads/2023/05/AnyConv.com__antiga-mesopotamia-860x487.webp" alt="Mesopotâmia">
+      <h3>Mesopotâmia</h3>
+    </a>
 
-    <!-- Quizzes ocultos inicialmente -->
-    <div id="mesopotamia" class="quiz-tema" style="display:none;">
-      <h3>Quiz: Mesopotamia</h3>
-      <div class="contenido-tema">
-        <h4>1. ¿Cuál fue una de las principales civilizaciones de Mesopotamia?</h4>
-        <button onclick="verificarRespuesta(this, true)">Sumeria</button>
-        <button onclick="verificarRespuesta(this, false)">Egipto</button>
-        <button onclick="verificarRespuesta(this, false)">Roma</button>
-        <div class="feedback"></div>
-      </div>
-      <div class="contenido-tema">
-        <h4>2. ¿Qué río era vital para la civilización mesopotámica?</h4>
-        <button onclick="verificarRespuesta(this, true)">Tigris y Éufrates</button>
-        <button onclick="verificarRespuesta(this, false)">Nilo</button>
-        <button onclick="verificarRespuesta(this, false)">Amazonas</button>
-        <div class="feedback"></div>
-      </div>
-    </div>
+    <a href="egipto.html" class="tarjeta">
+      <img src="https://content.nationalgeographic.pt/medio/import/attachment/edicoesespeciais/VIAGENS/Egipto/Piramides/e3.jpg" alt="Egito">
+      <h3>Egito</h3>
+    </a>
 
-    <div id="egipto" class="quiz-tema" style="display:none;">
-      <h3>Quiz: Egipto</h3>
-      <div class="contenido-tema">
-        <h4>1. ¿Qué río era vital para la civilización egipcia?</h4>
-        <button onclick="verificarRespuesta(this, true)">Nilo</button>
-        <button onclick="verificarRespuesta(this, false)">Tigris</button>
-        <button onclick="verificarRespuesta(this, false)">Amazonas</button>
-        <div class="feedback"></div>
-      </div>
-      <div class="contenido-tema">
-        <h4>2. ¿Cuál era la escritura utilizada por los antiguos egipcios?</h4>
-        <button onclick="verificarRespuesta(this, true)">Jeroglíficos</button>
-        <button onclick="verificarRespuesta(this, false)">Cuneiforme</button>
-        <button onclick="verificarRespuesta(this, false)">Alfabeto latino</button>
-        <div class="feedback"></div>
-      </div>
-    </div>
+    <a href="roma.html" class="tarjeta">
+      <img src="https://thumbs.dreamstime.com/b/indicadores-velhos-bonitos-em-roma-italy-o-colosseum-ou-coliseu-no-nascer-do-sol-144201572.jpg?w=768" alt="Roma">
+      <h3>Roma</h3>
+    </a>
 
-    <div id="roma" class="quiz-tema" style="display:none;">
-      <h3>Quiz: Roma</h3>
-      <div class="contenido-tema">
-        <h4>1. ¿Qué imperio construyó una extensa red de carreteras en Europa?</h4>
-        <button onclick="verificarRespuesta(this, true)">Romano</button>
-        <button onclick="verificarRespuesta(this, false)">Egipcio</button>
-        <button onclick="verificarRespuesta(this, false)">Chino</button>
-        <div class="feedback"></div>
-      </div>
-      <div class="contenido-tema">
-        <h4>2. ¿Qué estructura construyeron los romanos para transportar agua?</h4>
-        <button onclick="verificarRespuesta(this, true)">Acueductos</button>
-        <button onclick="verificarRespuesta(this, false)">Pirámides</button>
-        <button onclick="verificarRespuesta(this, false)">Zigurats</button>
-        <div class="feedback"></div>
-      </div>
-    </div>
+    <a href="grecia.html" class="tarjeta">
+      <img src="https://conhecimentocientifico.r7.com/wp-content/uploads/2020/01/grecia-antiga-o-que-foi-historia-e-aspectos-politicos-e-economicos.jpg.webp" alt="Grécia">
+      <h3>Grécia</h3>
+    </a>
 
-    <div id="grecia" class="quiz-tema" style="display:none;">
-      <h3>Quiz: Grecia</h3>
-      <div class="contenido-tema">
-        <h4>1. ¿Qué civilización es conocida como la cuna de la democracia?</h4>
-        <button onclick="verificarRespuesta(this, true)">Grecia</button>
-        <button onclick="verificarRespuesta(this, false)">Roma</button>
-        <button onclick="verificarRespuesta(this, false)">China</button>
-        <div class="feedback"></div>
-      </div>
-      <div class="contenido-tema">
-        <h4>2. ¿Qué ciudad griega fue famosa por su filosofía?</h4>
-        <button onclick="verificarRespuesta(this, true)">Atenas</button>
-        <button onclick="verificarRespuesta(this, false)">Alejandría</button>
-        <button onclick="verificarRespuesta(this, false)">Cartago</button>
-        <div class="feedback"></div>
-      </div>
-    </div>
-
-    <div id="china" class="quiz-tema" style="display:none;">
-      <h3>Quiz: China</h3>
-      <div class="contenido-tema">
-        <h4>1. ¿En qué continente se originó la civilización china antigua?</h4>
-        <button onclick="verificarRespuesta(this, true)">Asia</button>
-        <button onclick="verificarRespuesta(this, false)">África</button>
-        <button onclick="verificarRespuesta(this, false)">Europa</button>
-        <div class="feedback"></div>
-      </div>
-      <div class="contenido-tema">
-        <h4>2. ¿Qué invento se atribuye a los chinos en la antigüedad?</h4>
-        <button onclick="verificarRespuesta(this, true)">Papel</button>
-        <button onclick="verificarRespuesta(this, false)">Democracia</button>
-        <button onclick="verificarRespuesta(this, false)">Alfabeto</button>
-        <div class="feedback"></div>
-      </div>
-    </div>
-  </main>
+    <a href="china.html" class="tarjeta">
+      <img src="https://www.coladaweb.com/wp-content/uploads/2019/05/20190531-china-antiga.jpg" alt="China">
+      <h3>China</h3>
+    </a>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Historia Interactiva. Todos los derechos reservados.</p>
+    <p>&copy; 2025 História Interativa. Todos os direitos reservados.</p>
   </footer>
-
-  <script src="ejercicios.js"></script>
 </body>
 </html>
